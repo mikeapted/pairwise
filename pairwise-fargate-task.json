@@ -1,0 +1,23 @@
+{
+  "family": "pairwise", 
+  "networkMode": "awsvpc", 
+  "containerDefinitions": [
+      {
+          "name": "pairwise-app", 
+          "image": "mikeapted/pairwise:prod", 
+          "portMappings": [
+              {
+                  "containerPort": 80, 
+                  "hostPort": 80, 
+                  "protocol": "tcp"
+              }
+          ], 
+          "essential": true
+      }
+  ], 
+  "requiresCompatibilities": [
+      "FARGATE"
+  ], 
+  "cpu": "256", 
+  "memory": "512"
+}

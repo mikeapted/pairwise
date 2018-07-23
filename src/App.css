@@ -1,0 +1,47 @@
+* {
+  font-family: 'AmazonEmberLight,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,sans-serif';
+  color: #333;
+}
+
+.navbar {
+  background-color: #232f3e;
+}
+
+.navbar .navbar-brand {
+  color: #e47911;
+}
+
+.navbar a, .navbar button {
+  color: #fff;
+}
+
+.navbar .dropdown-menu a, .navbar .dropdown-menu button {
+  color: #333;
+}
+
+#csv {
+  opacity: 0;
+}
+
+#controlPanel {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+table td {
+  margin: 0;
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
