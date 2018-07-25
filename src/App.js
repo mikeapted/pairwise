@@ -132,22 +132,10 @@ class App extends Component {
     console.log('columnsToDisplay', columnsToDisplay);
     console.log('this.state', this.state);
 
-    let currentPairServices = [[], []];
-    for (let i=0; i<=1; i++) {
-      for (let j=9; j<=14; j++) {
-        if (this.state.currentPair[i] && this.state.currentPair[i][j] === 'TRUE') {
-          currentPairServices[i].push(this.state.headers[j].replace('9. AWS Technologies used:', ''));
-        }
-      }
-    }
-    table.push(
-      <tr>
-        <td>{currentPairServices[0] ? currentPairServices[0] : ''}</td>
-        <td>{currentPairServices[1] ? currentPairServices[1] : ''}</td>
-      </tr>);
     columnsToDisplay.forEach(index => {
       table.push(
         <tr key={index}>
+          <td>{this.state.headers[index]}</td>
           <td>{this.state.currentPair[0] ? this.state.currentPair[0][index] : ''}</td>
           <td>{this.state.currentPair[1] ? this.state.currentPair[1][index] : ''}</td>
         </tr>)
@@ -251,7 +239,7 @@ class App extends Component {
   }
 
   render() {
-    const columnsToDisplay = [7, 8, 23];
+    const columnsToDisplay = [0, 6, 4, 5, 1, 2];
 
     return (
       <div className="App">
@@ -322,6 +310,7 @@ class App extends Component {
               <table>
                 <thead>
                   <tr>
+                    <td>&nbsp;</td>
                     <td>
                       <Button color="primary" onClick={() => this.registerVote(0)}>
                         Vote for Pedro
